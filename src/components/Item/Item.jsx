@@ -9,7 +9,13 @@ export const Input = ({ title, id, onChange }) => {
 
 export const Button = ({ title, id, onClick, active }) => {
   return (
-    <button type="submit" data-testid={id} className={`${title === "추가" ? "todoButton" : "buttonStyle"} ${active ? "bg-green-500" : "bg-gray-400"}`} onClick={onClick}>
+    <button
+      type="submit"
+      data-testid={id}
+      className={`${title === "추가" ? "todoButton" : "buttonStyle"} ${active ? "bg-green-500" : "bg-gray-400"}`}
+      onClick={onClick}
+      disabled={title !== "추가" && !active}
+    >
       {title}
     </button>
   );
