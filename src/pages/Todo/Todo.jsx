@@ -117,19 +117,9 @@ const Todo = () => {
     }
   };
 
-  const logout = () => {
-    localStorage.removeItem("token");
-    navigate("/signin");
-  };
-
   return (
     <div className="w-4/5 h-full flex flex-col items-center gap-4 px-3">
-      <div className="flex flex-row items-center gap-4">
-        <Header title="TodoList" />
-        <button className="p-2 text-white bg-red-300 rounded-lg" onClick={logout}>
-          로그아웃
-        </button>
-      </div>
+      <Header title="TodoList" />
       <div className="w-full flex flex-row justify-between gap-3">
         <input data-testid="new-todo-input" className="w-3/4 h-12 pl-2 border border-gray-500 rounded-lg" onChange={addTodo.onChange} value={addTodo.data} />
         <Button title="추가" data-testid="new-todo-add-button" onClick={createTodo} />
