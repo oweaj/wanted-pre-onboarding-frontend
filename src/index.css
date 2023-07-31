@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer components {
+  .linkStyle {
+    @apply flex items-center justify-center bg-gray-400;
+  }
   .positionCenter {
     @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
   }
@@ -10,9 +13,12 @@
     @apply w-full h-full flex flex-col items-center justify-center;
   }
   .buttonStyle {
-    @apply w-64 h-12 rounded-lg text-white text-lg bg-gray-400;
+    @apply w-64 h-12 rounded-lg text-white text-lg;
   }
   .todoButton {
-    @apply h-12 flex-grow rounded-lg text-white text-lg bg-gray-400;
+    @apply flex-grow h-12 rounded-lg text-white text-lg bg-gray-400;
+  }
+  .todolistBtn {
+    @apply py-1 px-2 border border-black rounded-lg;
   }
 }
