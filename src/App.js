@@ -7,7 +7,7 @@ import Todo from "./pages/Todo/Todo";
 function App() {
   return (
     <div className="w-screen h-screen">
-      <div className="w-2/5 h-1/2 p-4 positionCenter bg-red-200">
+      <div className="w-2/5 h-1/2 p-4 positionCenter">
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/signin" element={<Signin />} />
