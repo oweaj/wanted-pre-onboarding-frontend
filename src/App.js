@@ -15,7 +15,7 @@ const App = () => {
     <div className="w-screen h-screen">
       <div className="w-2/5 h-1/2 p-4 positionCenter">
         <Routes>
-          <Route path="/" element={<Landing />} />
+          <Route path="/" element={<PrivateRoute component={<Landing />} auth={token} />} />
           <Route path="/signin" element={<PrivateRoute component={<Signin />} auth={token} />} />
           <Route path="/signup" element={<PrivateRoute component={<Signup />} auth={token} />} />
           <Route path="/todo" element={<Todo />} />
