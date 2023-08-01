@@ -7,14 +7,14 @@ export const Input = ({ title, id, onChange }) => {
   );
 };
 
-export const Button = ({ title, id, onClick, active }) => {
+export const Button = ({ type, title, id, onClick, active }) => {
   return (
     <button
-      type="submit"
+      type={type}
       data-testid={id}
-      className={`${title === "추가" ? "todoButton" : "buttonStyle"} ${active ? "bg-green-500" : "bg-gray-400"}`}
+      className={`${title === "로그인" || title === "회원가입" ? "buttonStyle" : title === "추가" ? "todoButton" : "todolistBtn"} ${active ? "bg-green-500" : "bg-gray-400"}`}
       onClick={onClick}
-      disabled={title !== "추가" && !active}
+      disabled={(title === "로그인" || title === "회원가입") && !active}
     >
       {title}
     </button>
