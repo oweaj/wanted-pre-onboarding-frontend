@@ -19,6 +19,6 @@
     @apply flex-grow h-12 rounded-lg text-white text-lg bg-gray-400;
   }
   .todolistBtn {
-    @apply py-1 px-2 border border-black rounded-lg;
+    @apply py-1 px-2 rounded-lg text-white;
   }
 }
