@@ -43,7 +43,7 @@ const Signup = () => {
       <form className="flex flex-col gap-4">
         <Input title="이메일" id="email-input" onChange={email.onChange} value={email.data} />
         <Input title="비밀번호" id="password-input" onChange={password.onChange} value={password.data} />
-        <Button title="회원가입" id="signup-button" onClick={register} active={active} />
+        <Button type="submit" title="회원가입" id="signup-button" onClick={register} active={active} />
       </form>
     </div>
   );

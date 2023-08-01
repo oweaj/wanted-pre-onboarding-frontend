@@ -44,7 +44,7 @@ const Signin = () => {
       <form className="flex flex-col gap-4">
         <Input title="이메일" id="email-input" onChange={email.onChange} value={email.data} />
         <Input title="비밀번호" id="password-input" onChange={password.onChange} value={password.data} />
-        <Button title="로그인" id="signin-button" onClick={login} active={active} />
+        <Button type="submit" title="로그인" id="signin-button" onClick={login} active={active} />
         <Link to="/signup" className="buttonStyle flex items-center justify-center bg-green-500">
           회원가입 페이지로 이동
         </Link>
