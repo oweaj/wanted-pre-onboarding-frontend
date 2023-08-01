@@ -1,3 +1,4 @@
+import { API_URL } from "../../api/api";
 import Header from "../../components/Header/Header";
 import { Input, Button } from "../../components/Item/Item";
 import { Link, useNavigate } from "react-router-dom";
@@ -14,7 +15,7 @@ const Signin = () => {
   const login = async (e) => {
     e.preventDefault();
     try {
-      const url = `${process.env.REACT_APP_API_URL}/auth/signin`;
+      const url = `${API_URL}/auth/signin`;
       const response = await axios.post(
         url,
         {

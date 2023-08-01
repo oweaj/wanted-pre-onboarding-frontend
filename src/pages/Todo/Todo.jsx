@@ -1,3 +1,4 @@
+import { API_URL } from "../../api/api";
 import Header from "../../components/Header/Header";
 import { Button } from "../../components/Item/Item";
 import { useNavigate } from "react-router-dom";
@@ -19,7 +20,7 @@ const Todo = () => {
 
   const getTodos = async () => {
     try {
-      const url = `${process.env.REACT_APP_API_URL}/todos`;
+      const url = `${API_URL}/todos`;
       const response = await axios.get(url, {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -34,7 +35,7 @@ const Todo = () => {
   const createTodo = async (e) => {
     e.preventDefault();
     try {
-      const url = `${process.env.REACT_APP_API_URL}/todos`;
+      const url = `${API_URL}/todos`;
       const response = await axios.post(
         url,
         {
@@ -60,7 +61,7 @@ const Todo = () => {
 
   const updateCheck = async (item) => {
     try {
-      const url = `${process.env.REACT_APP_API_URL}/todos/${item.id}`;
+      const url = `${API_URL}/todos/${item.id}`;
       await axios.put(
         url,
         {
@@ -82,7 +83,7 @@ const Todo = () => {
 
   const updateTodo = async (item, newData) => {
     try {
-      const url = `${process.env.REACT_APP_API_URL}/todos/${item.id}`;
+      const url = `${API_URL}/todos/${item.id}`;
       await axios.put(
         url,
         {
@@ -105,7 +106,7 @@ const Todo = () => {
 
   const deleteTodo = async (id) => {
     try {
-      const url = `${process.env.REACT_APP_API_URL}/todos/${id}`;
+      const url = `${API_URL}/todos/${id}`;
       await axios.delete(url, {
         headers: {
           Authorization: `Bearer ${token}`,

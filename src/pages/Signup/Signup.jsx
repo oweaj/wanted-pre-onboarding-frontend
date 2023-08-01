@@ -1,5 +1,6 @@
 import Header from "../../components/Header/Header";
 import { Input, Button } from "../../components/Item/Item";
+import { API_URL } from "../../api/api";
 import useInput from "../../hooks/useInput";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -14,7 +15,7 @@ const Signup = () => {
   const register = async (e) => {
     e.preventDefault();
     try {
-      const url = `${process.env.REACT_APP_API_URL}/auth/signup`;
+      const url = `${API_URL}/auth/signup`;
       await axios.post(
         url,
         {
